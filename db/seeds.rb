@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+unless User.any?
+  User.create(first_name: "Brock", last_name: "Sauvage", email: "brocksauvage@gmail.com", password: "test")
+end
+
 unless Genre.any?
   [
     "Ambient", "Anthem", "Bluegrass", "Blues", "Children", "Cinematic", "Classical",
