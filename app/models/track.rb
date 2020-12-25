@@ -13,10 +13,10 @@ class Track < ApplicationRecord
   alias_attribute :released, :release_date
 
   def url
-    if wav.attached?
-      Rails.application.routes.url_helpers.rails_blob_path(self.wav, only_path: true)
-    elsif mp3.attached?
-      Rails.application.routes.url_helpers.rails_blob_path(self.mp3, only_path: true)
+    if self.wav.attached?
+      self.wav.attachment.service_url
+    elsif self.mp3.attached?
+      self.mp3.attachment.service_url
     end
   end
 
