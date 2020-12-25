@@ -11,7 +11,7 @@ class TrackArea extends React.Component {
       <React.Fragment>
         <Container className="mt-3">
           <Row className="justify-content-md-center">
-            <CardDeck>
+            <CardDeck className="card-area">
               { this.props.tracks.map((track, index) => {
                 return <Track track={track} trackUrl={this.props.trackUrls[index]} coverImageUrl={this.props.coverImageUrls[index]} />
               })}

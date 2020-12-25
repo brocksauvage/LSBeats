@@ -40,10 +40,15 @@ audio::-webkit-media-controls-enclosure{
   color: $overtone;
 }
 
+.card-area{
+  width: 100%;
+}
+
 .track-card{
   //background-color: $tertiary;
   font-family: 'Audiowide', sans-serif;
   border-color: $secondary;
+  width: 100%;
 }
 
 .track-card-title{
