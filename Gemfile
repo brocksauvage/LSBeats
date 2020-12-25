@@ -28,6 +28,11 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'sidekiq', '~> 6.1.0'
 
+# Bootstrappy goodness
+
+gem 'bootstrap'
+gem 'jquery-rails'
+
 # All of our Admin Interface stuff
 
 gem 'trestle'

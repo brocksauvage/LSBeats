@@ -12,4 +12,44 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+@import "bootstrap";
+
+$background: #171738;
+$primary: #3423A6;
+$secondary: #2E1760;
+$tertiary: #7180B9;
+$overtone: #DFF3E4;
+
+body {
+  background-color: $background;
+  color: $overtone;
+}
+
+audio::-webkit-media-controls-enclosure{
+  background-color: $tertiary;
+}
+
+.player{
+  width:100%;
+  max-width:600px;
+}
+.header{
+  background-color: $background;
+  font-family: 'Audiowide', sans-serif;
+  color: $overtone;
+}
+
+.track-card{
+  //background-color: $tertiary;
+  font-family: 'Audiowide', sans-serif;
+  border-color: $secondary;
+}
+
+.track-card-title{
+  color: $primary;
+}
+
+.track-card-footer{
+  background-color: $tertiary;
+}
