@@ -9,12 +9,15 @@ class Track < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
   validates_numericality_of :bpm
-  validates :wav, presence: true
 
   alias_attribute :released, :release_date
 
   def url
-    Rails.application.routes.url_helpers.rails_blob_path(self.wav, only_path: true)
+    if wav.attached?
+      Rails.application.routes.url_helpers.rails_blob_path(self.wav, only_path: true)
+    elsif mp3.attached?
+      Rails.application.routes.url_helpers.rails_blob_path(self.mp3, only_path: true)
+    end
   end
 
   def cover_image_url
